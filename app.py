@@ -48,7 +48,7 @@ if uploaded_file and analyze_button:
             
             # Request analysis from Gemini 1.5 Flash
             response = client.models.generate_content(
-                model="gemini-1.5-flash",
+                model="gemini-1.5-flash-latest",
                 contents=[
                     genai.types.Part.from_bytes(data=image_bytes, mime_type=uploaded_file.type),
                     prompt
