@@ -10,7 +10,7 @@ st.title("🍏 AI Smart Visual Inventory & Expiry Tracker")
 
 # Initialize Gemini Client (Replace with your actual API key)
 API_KEY = st.secrets["GEMINI_API_KEY"]
-client = genai.Client(api_key=API_KEY)
+client = genai.Client(api_key=API_KEY, http_options={"api_version":"v1"})
 
 # Initialize a simple session database to keep track of items across clicks
 if "inventory" not in st.session_state:
